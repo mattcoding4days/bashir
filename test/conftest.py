@@ -15,7 +15,22 @@ correctly
 # standard lib
 
 # third party
+import pytest
 
 # bashir
+import bashir
 
 # noinspection PyCallByClass
+
+
+@pytest.fixture()
+def version_test() -> None:
+    """
+    test version
+    """
+    # Setup code
+
+    yield bashir
+
+    # tear down code
+    print("Tearing down")
